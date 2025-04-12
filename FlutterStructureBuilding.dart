@@ -17,57 +17,58 @@ class MyApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal,
       brightness: Brightness.dark)),
-      home: Scaffold(
-        appBar: AppBar(
-          //leading: Icon(Icons.add_business),
-          title: Text('Structure'),
-          centerTitle: true,
-          actions: [
-            Text("Login"),
-            Icon(Icons.login)
-            ],
-          backgroundColor: Colors.teal,
-        ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(child: Text("Drawer"),),
-              ListTile(title: Text("Logout ?"),),
-            ],
-          ),
-        ),
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(onPressed: (){
-              print("Checking !");
-            },
-              heroTag: 'Btn1',
-              child: Icon(Icons.add),
+      home: SafeArea(
+          child: Scaffold(
+            appBar: AppBar(
+              //leading: Icon(Icons.add_business),
+              title: Text('Structure'),
+              centerTitle: true,
+              actions: [
+                Text("Login"),
+                Icon(Icons.login)
+              ],
+              backgroundColor: Colors.teal,
             ),
-            const SizedBox(height: 10,),
-            FloatingActionButton(onPressed: (){
-              print("Checking !");
-            },
-              heroTag: 'Btn1',
-              child: Icon(Icons.delete),
+            drawer: Drawer(
+              child: Column(
+                children: [
+                  ListTile(title: Text("Logout ?"),),
+                ],
+              ),
             ),
-          ],
-        ),
-        bottomNavigationBar: NavigationBar(
-            destinations: const [
-              NavigationDestination(
-                icon: Icon(Icons.home),
-                label: "Home"),
-              NavigationDestination(
-                  icon: Icon(Icons.person),
-                  label: "Profile")
-            ],
-          onDestinationSelected: (int value){
-            print(value);
-          },
+            floatingActionButton: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                FloatingActionButton(onPressed: (){
+                  print("Checking !");
+                },
+                  heroTag: 'Btn1',
+                  child: Icon(Icons.add),
+                ),
+                const SizedBox(height: 10,),
+                FloatingActionButton(onPressed: (){
+                  print("Checking !");
+                },
+                  heroTag: 'Btn1',
+                  child: Icon(Icons.delete),
+                ),
+              ],
+            ),
+            bottomNavigationBar: NavigationBar(
+              destinations: const [
+                NavigationDestination(
+                    icon: Icon(Icons.home),
+                    label: "Home"),
+                NavigationDestination(
+                    icon: Icon(Icons.person),
+                    label: "Profile")
+              ],
+              onDestinationSelected: (int value){
+                print(value);
+              },
 
-        ),
+            ),
+          ),
       ),
     );
   }
