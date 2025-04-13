@@ -223,5 +223,3 @@ class ProfilePage extends StatelessWidget {
 > ✅ This app is a great first step in mastering Flutter. It combines navigation, theme switching, and state management basics with clean architecture.
 
 
-Let me know if you'd like a downloadable `.md` or `.pdf` version!
-
