@@ -1,5 +1,5 @@
 
-# 📘 Second Class - Widget Tree, Theme Switching, Navigation, and UI Widgets
+# 📘 Third Class - Widget Tree, Theme Switching, Navigation, and UI Widgets
 
 ## 🧠 Objectives
 - Understand how to manage **Dark/Light Theme** using `ValueNotifier`.
